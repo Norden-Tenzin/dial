@@ -6,6 +6,10 @@ import SwiftUI
 @available(iOS 17.0, *)
 public struct Dial: View {
     @Binding var value: Int
+    public init(value: Binding<Int>) {
+        _value = value
+    }
+    
     public var body: some View {
         GeometryReader(content: { geometry in
             let size = geometry.size
@@ -63,4 +67,3 @@ public struct Dial: View {
         .sensoryFeedback(.increase, trigger: value)
     }
 }
-

@@ -4,9 +4,9 @@
 import SwiftUI
 
 @available(iOS 17.0, *)
-struct Dial: View {
+public struct Dial: View {
     @Binding var value: Int
-    var body: some View {
+    public var body: some View {
         GeometryReader(content: { geometry in
             let size = geometry.size
             VStack {
